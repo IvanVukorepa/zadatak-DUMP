@@ -7,3 +7,14 @@ As with most other distributed version control systems, and unlike most clientâ€
 Like the Linux kernel, Git is free software distributed under the terms of the GNU General Public License version 2.
 
 Contents
+Git development began in April 2005, after many developers of the Linux kernel gave up access to BitKeeper, a proprietary source control management (SCM) system that they had formerly used to maintain the project.[15] The copyright holder of BitKeeper, Larry McVoy, had withdrawn free use of the product after claiming that Andrew Tridgell had reverse-engineered the BitKeeper protocols.[16] (The same incident would also spur the creation of another version control system, Mercurial.)
+
+Linus Torvalds wanted a distributed system that he could use like BitKeeper, but none of the available free systems met his needs, especially for performance. Torvalds cited an example of a source-control management system needing 30 seconds to apply a patch and update all associated metadata, and noted that this would not scale to the needs of Linux kernel development, where syncing with fellow maintainers could require 250 such actions at once. For his design criteria, he specified that patching should take no more than three seconds,[10] and added three more points:
+
+    Take Concurrent Versions System (CVS) as an example of what not to do; if in doubt, make the exact opposite decision[12]
+    Support a distributed, BitKeeper-like workflow[12]
+    Include very strong safeguards against corruption, either accidental or malicious[11]
+
+These criteria eliminated every then-extant version control system except Monotone. Performance considerations excluded it, too.[12] So immediately after the 2.6.12-rc2 Linux kernel development release, Torvalds set out to write his own system.[12]
+
+Torvalds quipped about the name git (which means unpleasant person in British English slang): "I'm an egotistical bastard, and I name all my projects after myself. First 'Linux', now 'git'."[17][18] The man page describes Git as "the stupid content tracker".[19] The readme file of the source code elaborates further:[20]
